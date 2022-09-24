@@ -6,6 +6,13 @@ class Student
 {
     public String Name = "";
 }
+public enum Greetings
+{
+    Morning,
+    Afternoon,
+    Evening,
+    Night
+};
 
 namespace Program1
 {
@@ -219,9 +226,34 @@ namespace Program1
                 }
             }
             */
-             
-
             #endregion Operators
+            #region  Program Flow
+            // Ternary Assignments can provide one-liner conditional assignments
+            bool informal = true;
+            name = informal ? "Chuck" : "Charles";
+            
+            // Switch statement
+            n = 1;
+            switch (n)
+            {
+                case 0:
+                    break;
+                case 1:
+                    Console.WriteLine("This is the line of code that will fire");
+                    break;
+                case 2:
+                    break;
+            }
+            string GreetString(Greetings value) => value switch
+            {
+                Greetings.Morning => "Good Morning!",
+                Greetings.Afternoon => "Good Afternoon!",
+                Greetings.Evening => "Good Evening!",
+                Greetings.Night => "Good Night!",
+                _ => "Not sure what time it is"
+            };
+            #endregion Program Flow
+
         }
     }
 }
