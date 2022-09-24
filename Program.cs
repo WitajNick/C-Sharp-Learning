@@ -244,7 +244,7 @@ namespace Program1
                 case 2:
                     break;
             }
-            string GreetString(Greetings value) => value switch
+            string greetString(Greetings value) => value switch
             {
                 Greetings.Morning => "Good Morning!",
                 Greetings.Afternoon => "Good Afternoon!",
@@ -252,6 +252,8 @@ namespace Program1
                 Greetings.Night => "Good Night!",
                 _ => "Not sure what time it is"
             };
+            Console.WriteLine(greetString(Greetings.Morning)); // Good Morning!
+            
             #endregion Program Flow
 
         }
