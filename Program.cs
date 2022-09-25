@@ -253,9 +253,54 @@ namespace Program1
                 _ => "Not sure what time it is"
             };
             Console.WriteLine(greetString(Greetings.Morning)); // Good Morning!
-            
+
+            // An arrow function
+            Func<string> greet = () => "Hello World!";
+
+            // While Loop
+            bool status = true;
+            while (status)
+            {
+                status = false;
+            }
+
+            do {
+                Console.WriteLine("This line will be executed once");
+            } while (status);
+
+            while(true)
+            {
+                break;
+            };
+
+
+            int duration = 4;
+            for (int year = 1; year <= duration; year = year + 1)
+            {
+                Console.WriteLine("This line will execute \"duration\" times.");
+            }
+
+
             #endregion Program Flow
 
+            #region Collections
+            // Collections are variables which contain multiple items.
+            // Two types of collections are arrays and the collection class.
+
+            // Array
+            int[] arr = {5, 6, 7, 4, 5, 2};
+            int[] subArr = arr[1..3]; // {6, 7}
+            int[] backwardsSubArr = arr[^3..^0]; // {7, 6, 5}
+
+            // An empty array
+            int[] emptyArr = new int[6];
+
+            Console.WriteLine(arr.Length); // 6
+
+
+
+
+            #endregion Collections
         }
     }
 }
