@@ -295,11 +295,10 @@ namespace Program1
             // An empty array
             int[] emptyArr = new int[6];
 
+            // Length Attribute
             Console.WriteLine(arr.Length); // 6
 
-
-
-
+            
             #endregion Collections
         }
     }
